@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --dark_cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very_dark_blue: hsl(212, 21%, 14%);
+    --dark_grayish_blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --deep_aquamarine: hsl(157, 43%, 18%);
+    --content-width: 90vw;
+}
+
+main {
+    background-color: var(--cream);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.card {
+    width: var(--content-width);
+    background-color: var(--white);
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+img {
+    block-size: auto;
+    object-fit: cover;
+}
+
+.product_img {
+    aspect-ratio: 1.45;
+}
+
+.product_info {
+    padding: 1.5rem
+}
+
+.product_category {
+    font-size: 0.75rem;
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+    color: var(--dark_grayish_blue);
+}
+
+.product_name {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Fraunces", sans-serif;
+    line-height: 2rem;
+    color: var(--very_dark_blue);
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.product_desc {
+    color: var(--dark_grayish_blue);
+    line-height: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.product_price {
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
+}
+
+.product_price span {
+    display: block;
+}
+
+.product_sale_price {
+    color: var(--dark_cyan);
+    font-size: 2rem;
+    font-family: "Fraunces", sans-serif;
+    line-height: 2rem;
+    margin-right: 1.25rem;
+}
+
+.product_main_price {
+    text-decoration: line-through;
+    color: var(--dark_grayish_blue);
+    font-size: 0.8rem;
+}
+
+.action {
+    border: unset;
+    color: var(--white);
+    background-color: var(--dark_cyan);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 0px;
+    border-radius: .5rem;
+    font-weight: 600;
+    font-size: .875rem;
+    cursor: pointer;
+}
+
+.action span {
+    display: inline-block
+}
+
+.action:hover {
+    background-color: var(--deep_aquamarine);
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --content-width: 41.67vw
+    }
+
+    .card {
+        flex-direction: row;
+    }
+
+    .product_img {
+        width: 50%;
+    }
+
+}
